@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Juego para adivinar colores RGB en dos niveles de dificultad.">
+	<title>Juego de colores RGB</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<main class="game-shell">
+		<header class="hero">
+			<p class="eyebrow">LABORATORIO DE COLOR <span aria-hidden="true">/</span> 001</p>
+			<h1>Adivina con <span>RGB</span></h1>
+			<p class="intro">Entrená tu ojo. Elegí la muestra que coincide con el código de color.</p>
+		</header>
+
+		<section class="game-panel" aria-label="Juego de adivinar colores">
+			<div class="game-toolbar">
+				<button class="new-colors" id="new-colors" type="button">Nuevos colores <span aria-hidden="true">&#8594;</span></button>
+				<div class="difficulty" role="group" aria-label="Nivel de dificultad">
+					<button class="mode-button is-active" data-mode="easy" type="button" aria-pressed="true">Fácil</button>
+					<button class="mode-button" data-mode="hard" type="button" aria-pressed="false">Difícil</button>
+				</div>
+			</div>
+
+			<div class="target-area">
+				<p class="target-label">¿Qué color es?</p>
+				<p class="rgb-code" id="rgb-code" aria-live="polite">RGB(0, 0, 0)</p>
+				<p class="status" id="status" aria-live="polite">Elegí una muestra para comenzar</p>
+			</div>
+
+			<div class="swatches" id="swatches" aria-label="Opciones de color"></div>
+		</section>
+
+		<footer class="footer-note">
+			<span class="footer-dot" aria-hidden="true"></span>
+			<span>Un click por intento. La respuesta correcta siempre permanece.</span>
+		</footer>
+	</main>
+	<script src="js.js"></script>
+</body>
+</html>

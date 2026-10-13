@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cosas para hacer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="todo-panel">
+        <h1>Cosas para hacer</h1>
+
+        <form id="todo-form" class="todo-form" autocomplete="off">
+          <input
+            id="todo-input"
+            type="text"
+            maxlength="80"
+            placeholder="Tarea a agregar"
+            aria-label="Nueva tarea"
+          />
+          <button type="submit" class="add-btn" aria-label="Agregar tarea">+</button>
+        </form>
+
+        <ul id="todo-list" class="todo-list" aria-live="polite"></ul>
+
+        <div class="actions">
+          <button id="clear-completed" type="button" class="secondary-btn">
+            Borrar completadas
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
